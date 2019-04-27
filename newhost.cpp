@@ -49,6 +49,9 @@ int main()
 		// Set user
 		str1 = "chown -R $USER:www-data /var/www/html/" + dir_name;
 		system(str1.c_str());
+
+		// TODO: Set permissions
+		//sudo chmod -R 755 /var/www
 		
 		// TODO: Create apache config entry
 		// at /etc/apache2/sites-available/[name].conf
