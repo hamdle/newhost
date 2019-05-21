@@ -1,4 +1,4 @@
-.PHONY: all build clean rebuild
+.PHONY: all build clean rebuild run
 
 all: build
 
@@ -12,3 +12,6 @@ clean:
 	mkdir build
 
 rebuild: clean build
+
+run:
+	./build/newhost

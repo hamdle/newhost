@@ -6,10 +6,10 @@
 #include <string>
 using namespace std;
 
-bool gi_on = true;	// Get info
-bool fs_on = true;	// File setup
-bool as_on = true;	// Apache setup
-bool hs_on = true;	// Hosts setup
+bool gi_on = false;	// Get info
+bool fs_on = false;	// File setup
+bool as_on = false;	// Apache setup
+bool hs_on = false;	// Hosts setup
 
 string dir_name;
 string web_root;
@@ -105,6 +105,8 @@ void file_setup()
 
 void apache_setup()
 {
+	if (!as_on)
+		return;
 	try
 	{
 		cout << "Updating apache.\n";
